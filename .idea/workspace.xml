@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest_api_3103/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_api_3103/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +66,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.rest api">
+  <component name="RunManager" selected="Shell Script.auto_save">
     <configuration name="rest api" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
