@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
+    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="[test] add test commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rest_api_3103/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_api_3103/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,12 +36,22 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/casperDev3/p31_api.git&quot;,
-    &quot;accountId&quot;: &quot;9768658a-36e9-4125-95d3-ca50b7d4f2b2&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/casperDev3/p31_api.git",
+    "accountId": "9768658a-36e9-4125-95d3-ca50b7d4f2b2"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "casperDev3",
+    "repository": "p31_api"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -68,7 +79,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Shell Script.auto_save">
+  <component name="RunManager" selected="Python.rest api">
     <configuration name="rest api" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
@@ -211,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1775147629628</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[test] add test commit">
+      <option name="closed" value="true" />
+      <created>1775147883590</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775147883590</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[test] add test commit">
+      <option name="closed" value="true" />
+      <created>1775147909870</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1775147909870</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +254,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="demo git in terminal" />
-    <option name="LAST_COMMIT_MESSAGE" value="demo git in terminal" />
+    <MESSAGE value="[test] add test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="[test] add test commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

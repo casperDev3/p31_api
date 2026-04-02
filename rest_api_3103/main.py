@@ -7,6 +7,7 @@ import uvicorn
 
 app = FastAPI(title="REST FastAPI", version="0.0.1")
 
+
 def log_execution_time(endpoint_name: str):
     def decorator(func):
         # TODO: next lesson
@@ -18,14 +19,18 @@ def log_execution_time(endpoint_name: str):
             execution_time = (end_time - start_time).total_seconds()
             print(f"Endpoint '{endpoint_name}' executed in {execution_time:.4f} seconds")
             return result
+
         return wrapper
+
     return decorator
+
 
 # models #TODO: next lesson
 class UserCreate(BaseModel):
     name: str
     email: str
     age: int
+
 
 class User(UserCreate):
     id: int
@@ -35,7 +40,8 @@ class User(UserCreate):
 users_db: List[User] = []
 user_id_counter = 1
 
-#TODO: next lesson
+
+# TODO: next lesson
 def user_id_generator() -> Generator[int, None, None]:
     global user_id_counter
     while True:
@@ -49,6 +55,7 @@ id_gen = user_id_generator()
 filter_adults = lambda users: [user for user in users if user.age >= 18]
 filter_by_name = lambda name: lambda users: [user for user in users if user.name.lower() == name.lower()]
 
+
 # 404
 def get_user_or_404(user_id: int) -> User:
     user = next((user for user in users_db if user.id == user_id), None)
@@ -56,13 +63,16 @@ def get_user_or_404(user_id: int) -> User:
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
+
 @app.get("/")
 async def root():
     return {"message": "Hello World!"}
 
+
 @app.get("/health")
 async def health():
     return {"status": "ok", "timestamp": datetime.now().isoformat()}
+
 
 # users
 @app.post("/users/", response_model=User)
@@ -79,9 +89,14 @@ async def create_user(user: UserCreate):
         # return 400 with error message
         raise HTTPException(status_code=400, detail=str(e))
 
+
 @app.get("/users/", response_model=List[User])
 @log_execution_time("list_users")
-async def get_all_users():
+async def get_all_users(
+        adult: Optional[bool] = None,
+):
+    if adult is not None:
+        return filter_adults(users_db) if adult else [user for user in users_db if user.age < 18]
     return users_db
 
 
@@ -95,6 +110,36 @@ async def get_all_users():
 async def get_user(user_id: int):
     return get_user_or_404(user_id)
 
+
+# @app.put("/users/{user_id}", response_model=User)
+# @log_execution_time("update_user")
+# async def update_user(
+#         user_id: int,
+#         updated_user: UserCreate,
+# ):
+#     try:
+#         user_index = next(i for i, user in enumerate(users_db) if user.id == user_id)
+#         users_db[user_index] = User(id=user_id, **updated_user.model_dump())
+#         return users_db[user_index]
+#     except Exception as e:
+#         raise HTTPException(status_code=400, detail=str(e))
+
+# eazy update
+@app.put("/users/{user_id}", response_model=User)
+@log_execution_time("update_user")
+async def update_user(
+        data: UserCreate,
+        user_id: int
+):
+
+    user = get_user_or_404(user_id)
+    user.name = data.name
+    user.email = data.email
+    user.age = data.age
+
+    return user
+
+
 # @app.delete("/users/{user_id}")
 # @log_execution_time("delete_user")
 # async def delete_user(user: User = Depends(get_user_or_404)):
@@ -107,9 +152,6 @@ async def delete_user(user_id: int):
     user = get_user_or_404(user_id)
     users_db.remove(user)
     return user
-
-
-
 
 
 if __name__ == "__main__":
