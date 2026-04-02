@@ -157,11 +157,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test activity" />
       <item itemvalue="Python.rest api" />
-      <item itemvalue="Shell Script.refresh_libs" />
-      <item itemvalue="Shell Script.intall_libs" />
+      <item itemvalue="Python.test activity" />
       <item itemvalue="Shell Script.auto_save" />
+      <item itemvalue="Shell Script.intall_libs" />
+      <item itemvalue="Shell Script.refresh_libs" />
     </list>
     <recent_temporary>
       <list>
