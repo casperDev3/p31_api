@@ -42,7 +42,6 @@ def user_id_generator() -> Generator[int, None, None]:
         yield user_id_counter
         user_id_counter += 1
 
-
 id_gen = user_id_generator()
 
 # lambda filters #TODO: next lesson
