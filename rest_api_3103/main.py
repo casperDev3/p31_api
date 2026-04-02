@@ -58,6 +58,7 @@ filter_by_name = lambda name: lambda users: [user for user in users if user.name
 
 # 404
 def get_user_or_404(user_id: int) -> User:
+    # TODO: next lesson
     user = next((user for user in users_db if user.id == user_id), None)
     if user is None:
         raise HTTPException(status_code=404, detail="User not found")

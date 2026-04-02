@@ -21,7 +21,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}",
+                  "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 12\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -207,6 +207,55 @@
                   ],
                   "cookie": [],
                   "body": "[\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 1\n    },\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 2\n    },\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 3\n    }\n]"
+                },
+                {
+                  "name": "[200] Filter: Adult users",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}"
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}/users?adult=True",
+                      "host": [
+                        "{{base_url_local}}"
+                      ],
+                      "path": [
+                        "users"
+                      ],
+                      "query": [
+                        {
+                          "key": "adult",
+                          "value": "True"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Thu, 02 Apr 2026 17:48:11 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "56"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 1\n    }\n]"
                 }
               ]
             },
@@ -358,6 +407,39 @@
                   "body": "[\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 1\n    },\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 2\n    },\n    {\n        \"name\": \"John\",\n        \"email\": \"john@doe.com\",\n        \"age\": 33,\n        \"id\": 3\n    }\n]"
                 }
               ]
+            },
+            {
+              "name": "Update an user",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"Jane\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url_local}}/users/:id",
+                  "host": [
+                    "{{base_url_local}}"
+                  ],
+                  "path": [
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "1"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ]
         },
