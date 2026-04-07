@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="[test] add test commit">
+      <change afterPath="$PROJECT_DIR$/jwt_0704/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/primitives_404/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/primitives_404/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +60,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.base_func_0404.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rest api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test activity.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Shell Script.auto_save.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.intall_libs.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.refresh_libs.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;jwt-primitive-func-0404&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.base_func_0404.executor": "Run",
+    "Python.jwt_0704.executor": "Run",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.rest api.executor": "Run",
+    "Python.test activity.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.auto_save.executor": "Run",
+    "Shell Script.intall_libs.executor": "Run",
+    "Shell Script.refresh_libs.executor": "Run",
+    "git-widget-placeholder": "jwt-a1d-0704",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
-  <component name="RunManager" selected="Python.base_func_0404">
+}]]></component>
+  <component name="RunManager" selected="Python.jwt_0704">
     <configuration name="base_func_0404" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
@@ -95,6 +96,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/primitives_404/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jwt_0704" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="p31_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jwt_0704" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jwt_0704/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,6 +194,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.jwt_0704" />
       <item itemvalue="Python.base_func_0404" />
       <item itemvalue="Python.test activity" />
       <item itemvalue="Shell Script.auto_save" />
@@ -179,6 +203,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.jwt_0704" />
         <item itemvalue="Python.base_func_0404" />
         <item itemvalue="Python.test activity" />
       </list>

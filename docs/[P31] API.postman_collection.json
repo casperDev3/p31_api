@@ -908,6 +908,37 @@
           ]
         },
         {
+          "name": "auth",
+          "item": [
+            {
+              "name": "Register new user",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}{{prefix}}/register",
+                  "host": [
+                    "{{base_url}}{{prefix}}"
+                  ],
+                  "path": [
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
           "name": "root",
           "request": {
             "method": "GET",
@@ -927,9 +958,9 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{base_url}}/health",
+              "raw": "{{base_url}}{{prefix}}/health",
               "host": [
-                "{{base_url}}"
+                "{{base_url}}{{prefix}}"
               ],
               "path": [
                 "health"
