@@ -31,6 +31,12 @@ class UserRegister(BaseModel):
     email: EmailStr
     password: str = Field(..., min_length=6)
     username: str = Field(..., min_length=3, max_length=50)
+    text: Optional[str] = None
+
+
+class UpdateProfile(BaseModel):
+    email: Optional[EmailStr] = None
+    text: Optional[str] = None
 
 
 class UserLogin(BaseModel):
@@ -83,13 +89,62 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
 
 
 # endpoints
-@app.post(f"{PREFIX}/register", status_code=status.HTTP_201_CREATED)
-async def register():
+@app.post(f"{PREFIX}/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
+async def register(user: UserRegister):
+    if user.username in fake_users_db:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username already exists")
+    hashed_password = get_password_hash(user.password)
+    fake_users_db[user.username] = {
+        "email": user.email,
+        "username": user.username,
+        "hashed_password": hashed_password,
+        "created_at": datetime.utcnow()
+    }
+    return UserResponse(
+        email=user.email,
+        username=user.username,
+        message="User registered successfully. Text: " + (user.text or "")
+    )
+
+
+@app.post(f"{PREFIX}/login")
+async def login(user: UserLogin):
+    db_user = fake_users_db.get(user.username)
+    if not db_user or not verify_password(user.password, db_user["hashed_password"]):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid username or password")
+    access_token = create_access_token(data={"sub": user.username})
     return {
-        "message": "User registered successfully",
+        "message": "Login successful",
+        "username": user.username,
+        "email": db_user["email"],
+        "access_token": access_token,
+        "token_type": "bearer"
     }
 
 
+# protected endpoint
+@app.put(f"{PREFIX}/profile/{{username}}")
+async def update_profile(username: str, data: UpdateProfile, current_user: dict = Depends(get_current_user)):
+    if current_user["username"] != username:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized to update this profile")
+    db_user = fake_users_db.get(username)
+    if not db_user:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+    # Update user data
+    if data.email:
+        db_user["email"] = data.email
+    if data.text is not None:
+        db_user["text"] = data.text
+
+    return {
+        "message": "Profile updated successfully",
+        "username": username,
+        "email": db_user["email"],
+        "text": db_user.get("text", "")
+    }
+
+
+# basic endpoints
 @app.get("/")
 async def root():
     return {

@@ -911,13 +911,61 @@
           "name": "auth",
           "item": [
             {
-              "name": "Register new user",
+              "name": "profile",
+              "item": [
+                {
+                  "name": "Update a profile",
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NTg0MzM3fQ.EtJsHI8dQFeOPvh1bPARIhqr3TJT0fWBeXdzKsNgedw",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"text\": \"test1wdfs22\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url}}{{prefix}}/profile/:username",
+                      "host": [
+                        "{{base_url}}{{prefix}}"
+                      ],
+                      "path": [
+                        "profile",
+                        ":username"
+                      ],
+                      "variable": [
+                        {
+                          "key": "username",
+                          "value": "johndoe"
+                        }
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "Register a new user",
               "request": {
                 "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "",
+                  "raw": "{\n    \"email\": \"john@doe.com\",\n    \"password\": \"123456Q\",\n    \"username\": \"johndoe\",\n    \"text\": \"test1\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -931,6 +979,32 @@
                   ],
                   "path": [
                     "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Login a user",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"password\": \"123456Q\",\n    \"username\": \"johndoe\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}{{prefix}}/login",
+                  "host": [
+                    "{{base_url}}{{prefix}}"
+                  ],
+                  "path": [
+                    "login"
                   ]
                 }
               },
