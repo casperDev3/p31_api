@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
-from schemas import UpdateProfile, ChangePassword
-from security import get_current_user, get_current_admin_user, get_password_hash, verify_password
-from db import fake_users_db
+from ..schemas import UpdateProfile, ChangePassword
+from ..security import get_current_user, get_current_admin_user, get_password_hash, verify_password
+from ..db import fake_users_db
 
 router = APIRouter(prefix="/users", tags=["users"])
 

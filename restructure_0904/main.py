@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-import auth, users
+from routers import auth, users
 
 PREFIX = "/api/v1"
 

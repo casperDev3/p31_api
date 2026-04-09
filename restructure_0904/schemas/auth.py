@@ -9,11 +9,6 @@ class UserRegister(BaseModel):
     text: Optional[str] = None
 
 
-class UpdateProfile(BaseModel):
-    email: Optional[EmailStr] = None
-    text: Optional[str] = None
-
-
 class UserLogin(BaseModel):
     username: str
     password: str
