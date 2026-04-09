@@ -72,5 +72,6 @@ async def reset_password(data: ResetPassword):
         user["hashed_password"] = get_password_hash(data.new_password)
         return {"message": "Password reset successful"}
 
-    except Exception:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Invalid or expired token")
+    except Exception as error:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
+                            detail=f"Invalid or expired token. Error: {str(error)}")
