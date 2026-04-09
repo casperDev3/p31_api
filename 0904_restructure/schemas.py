@@ -37,3 +37,4 @@ class ForgotPassword(BaseModel):
 class ResetPassword(BaseModel):
     token: str
     new_password: str = Field(..., min_length=6)
+    confirm_password: str = Field(..., min_length=6)

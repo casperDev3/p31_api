@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="[test] add test commit">
-      <change afterPath="$PROJECT_DIR$/0904_restructure/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0904_restructure/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0904_restructure/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0904_restructure/schemas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0904_restructure/security.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/0904_restructure/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jwt_0704/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/0704_jwt/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/primitives_404/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/0404_primitives/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rest_api_3103/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/3103_rest_api/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/2803_welcome_fastapi/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2803_welcome_fastapi/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/2803_welcome_fastapi/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0904_restructure/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/0904_restructure/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0904_restructure/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/0904_restructure/schemas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +89,7 @@
       <recent name="$PROJECT_DIR$/0904_restructure/routers" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.0904_restructure">
+  <component name="RunManager" selected="Shell Script.auto_save">
     <configuration name="0904_restructure" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
