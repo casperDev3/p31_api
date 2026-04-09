@@ -911,7 +911,7 @@
           "name": "auth",
           "item": [
             {
-              "name": "profile",
+              "name": "users",
               "item": [
                 {
                   "name": "Update a profile",
@@ -921,7 +921,7 @@
                       "bearer": [
                         {
                           "key": "token",
-                          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NTg0MzM3fQ.EtJsHI8dQFeOPvh1bPARIhqr3TJT0fWBeXdzKsNgedw",
+                          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NzUyMzY4fQ.-C-akg4kk5iXWJRhfnlqrZI148J-sVy0kWoTyXiHh5o",
                           "type": "string"
                         }
                       ]
@@ -938,12 +938,12 @@
                       }
                     },
                     "url": {
-                      "raw": "{{base_url}}{{prefix}}/profile/:username",
+                      "raw": "{{base_url}}{{prefix}}/users/:username",
                       "host": [
                         "{{base_url}}{{prefix}}"
                       ],
                       "path": [
-                        "profile",
+                        "users",
                         ":username"
                       ],
                       "variable": [
@@ -973,11 +973,12 @@
                   }
                 },
                 "url": {
-                  "raw": "{{base_url}}{{prefix}}/register",
+                  "raw": "{{base_url}}{{prefix}}/auth/register",
                   "host": [
                     "{{base_url}}{{prefix}}"
                   ],
                   "path": [
+                    "auth",
                     "register"
                   ]
                 }
@@ -991,7 +992,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"password\": \"123456Q\",\n    \"username\": \"johndoe\"\n}",
+                  "raw": "{\n    \"password\": \"123456L\",\n    \"username\": \"johndoe\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -999,16 +1000,220 @@
                   }
                 },
                 "url": {
-                  "raw": "{{base_url}}{{prefix}}/login",
+                  "raw": "{{base_url}}{{prefix}}/auth/login",
                   "host": [
                     "{{base_url}}{{prefix}}"
                   ],
                   "path": [
+                    "auth",
                     "login"
                   ]
                 }
               },
               "response": []
+            },
+            {
+              "name": "Forgot Password",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"john@doe.com\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}{{prefix}}/auth/forgot-password",
+                  "host": [
+                    "{{base_url}}{{prefix}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "[200] Success",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"email\": \"john@doe.com\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url}}{{prefix}}/auth/forgot-password",
+                      "host": [
+                        "{{base_url}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "forgot-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Thu, 09 Apr 2026 16:25:12 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "203"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Password reset link sent to email (simulated)\",\n    \"reset_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NzUyODEyfQ.e_6Q679I5jyyQDVk2gRlumoIqgcFdCglZE9LeI6OO6k\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Reset Password",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"new_password\": \"123456L\",\n    \"confirm_password\": \"123456L\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NzUyNjcyfQ.OcS9igMihlkNkv7olX4LWfVCydDx591NF0tNom-fLOg\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}{{prefix}}/auth/reset-password",
+                  "host": [
+                    "{{base_url}}{{prefix}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "reset-password"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "[400] Passwords do not match",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"new_password\": \"123456P\",\n    \"confirm_password\": \"123456L\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NzUyNjcyfQ.OcS9igMihlkNkv7olX4LWfVCydDx591NF0tNom-fLOg\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url}}{{prefix}}/auth/reset-password",
+                      "host": [
+                        "{{base_url}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Thu, 09 Apr 2026 16:25:50 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "73"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"detail\": \"Invalid or expired token. Error: 400: Passwords do not match\"\n}"
+                },
+                {
+                  "name": "[200] Success: Password reset successful",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"new_password\": \"123456L\",\n    \"confirm_password\": \"123456L\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzc1NzUyNjcyfQ.OcS9igMihlkNkv7olX4LWfVCydDx591NF0tNom-fLOg\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url}}{{prefix}}/auth/reset-password",
+                      "host": [
+                        "{{base_url}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "reset-password"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "date",
+                      "value": "Thu, 09 Apr 2026 16:26:54 GMT"
+                    },
+                    {
+                      "key": "server",
+                      "value": "uvicorn"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "39"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Password reset successful\"\n}"
+                }
+              ]
             }
           ]
         },
