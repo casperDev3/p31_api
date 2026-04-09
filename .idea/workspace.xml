@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="[test] add test commit">
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restructure_0904/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restructure_0904/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restructure_0904/schemas/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0404_primitives/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/primitives_0404/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0704_jwt/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/jwt_0704/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/routers/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/schemas/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/0904_restructure/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/routers/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2803_welcome_fastapi/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/welcome_fastapi_2803/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2803_welcome_fastapi/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/welcome_fastapi_2803/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2803_welcome_fastapi/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/welcome_fastapi_2803/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3103_rest_api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_api_3103/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restructure_0904/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restructure_0904/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restructure_0904/routers/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/routers/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restructure_0904/schemas/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/restructure_0904/schemas/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,29 +92,7 @@
       <recent name="$PROJECT_DIR$/0904_restructure" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.auto_save">
-    <configuration name="0904_restructure" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="p31_api" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/0904_restructure" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/0904_restructure/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="base_func_0404" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
@@ -163,6 +129,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jwt_0704/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="p31_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/restructure_0904" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/restructure_0904/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,7 +227,7 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.0904_restructure" />
+      <item itemvalue="Python.main" />
       <item itemvalue="Python.jwt_0704" />
       <item itemvalue="Python.base_func_0404" />
       <item itemvalue="Python.test activity" />
@@ -249,7 +237,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.0904_restructure" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.test activity" />
         <item itemvalue="Python.jwt_0704" />
         <item itemvalue="Python.base_func_0404" />
