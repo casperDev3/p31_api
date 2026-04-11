@@ -23,7 +23,8 @@ async def update_profile(username: str, data: UpdateProfile, current_user: dict 
         "message": "Profile updated successfully",
         "username": username,
         "email": db_user["email"],
-        "text": db_user.get("text", "")
+        "text": db_user.get("text", ""),
+        'updated_at': db_user.get("updated_at")
     }
 
 
