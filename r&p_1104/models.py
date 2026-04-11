@@ -12,8 +12,8 @@ class User(Base):
     role = Column(String, default="user")  # "user" or "admin"
 
     # 1 user have many reviews
-    reviews = relationship("Reviews", back_populates="owner")
-    products = relationship("Products", back_populates="owner")
+    reviews = relationship("Review", back_populates="owner")
+    products = relationship("Product", back_populates="owner")
 
 class Product(Base):
     __tablename__ = "products"
@@ -26,9 +26,10 @@ class Product(Base):
     user_id = Column(Integer, ForeignKey("users.id"))
 
     # 1 product have many reviews
-    reviews = relationship("Reviews", back_populates="product")
+    reviews = relationship("Review", back_populates="product")
+    owner = relationship("User", back_populates="products")
 
-class Reviews(Base):
+class Review(Base):
     __tablename__ = "reviews"
     id = Column(Integer, primary_key=True, index=True)
     rating = Column(Integer) # 1-5
