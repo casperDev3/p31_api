@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
-      <change beforePath="$PROJECT_DIR$/rest_api_3103/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/rest_api_3103/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/[P31] API.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rest_api_3103/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome_fastapi_2803/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +69,11 @@
     "Shell Script.auto_save.executor": "Run",
     "Shell Script.intall_libs.executor": "Run",
     "Shell Script.refresh_libs.executor": "Run",
-    "git-widget-placeholder": "rest-api-fastapi-0201",
+    "git-widget-placeholder": "dj-intro-p31-2104",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Shell Script.auto_save">
+  <component name="RunManager" selected="Python.test activity">
     <configuration name="rest api" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="p31_api" />
       <option name="ENV_FILES" value="" />
@@ -167,8 +172,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.rest api" />
         <item itemvalue="Python.test activity" />
+        <item itemvalue="Python.rest api" />
       </list>
     </recent_temporary>
   </component>
@@ -234,12 +239,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/rest_api_3103/main.py</url>
-          <line>72</line>
+          <line>62</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/rest_api_3103/main.py</url>
-          <line>45</line>
+          <line>39</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
