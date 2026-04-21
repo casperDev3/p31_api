@@ -1635,6 +1635,780 @@
           "name": "News",
           "item": [
             {
+              "name": "Categories",
+              "item": [
+                {
+                  "name": "Create a category",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"Технології\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/categories/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "categories",
+                        ""
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[201] Success Response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"Технології\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/categories/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "categories",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:13:57 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "31" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"Технології\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get categories",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/categories/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "categories",
+                        ""
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/categories/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "categories",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:14:40 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "63" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Технології\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Спорт\"\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get a category",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "categories",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "categories",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:16:57 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "29" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"Технології\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Update a category",
+                  "request": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"Наука\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "categories",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"Наука\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "categories",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:20:04 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "26" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"Наука\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Delete a category",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "categories",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[204] Success delete",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "categories",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:22:51 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "0" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Tags",
+              "item": [
+                {
+                  "name": "Create a tag",
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"python\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/tags/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "tags",
+                        ""
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[201] Success Response",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"python\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/tags/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "tags",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:13:57 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "25" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"python\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get tags",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/tags/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "tags",
+                        ""
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/tags/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "tags",
+                            ""
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:14:40 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "55" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"python\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"django\"\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Get a tag",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "tags",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "tags",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:16:57 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "23" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"python\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Update a tag",
+                  "request": {
+                    "method": "PUT",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"django-rest\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "tags",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[200] Success Response",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"name\": \"django-rest\"\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "tags",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:20:04 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Content-Type", "value": "application/json" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "30" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": "{\n    \"id\": 1,\n    \"name\": \"django-rest\"\n}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Delete a tag",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        "tags",
+                        ":id",
+                        ""
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "[204] Success delete",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": ""
+                        },
+                        "url": {
+                          "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
+                          "host": [
+                            "{{base_url_local}}{{prefix}}"
+                          ],
+                          "path": [
+                            "news",
+                            "tags",
+                            ":id",
+                            ""
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "No Content",
+                      "code": 204,
+                      "_postman_previewlanguage": null,
+                      "header": [
+                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:22:51 GMT" },
+                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
+                        { "key": "Vary", "value": "Accept, Cookie" },
+                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
+                        { "key": "X-Frame-Options", "value": "DENY" },
+                        { "key": "Content-Length", "value": "0" },
+                        { "key": "X-Content-Type-Options", "value": "nosniff" },
+                        { "key": "Referrer-Policy", "value": "same-origin" },
+                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                      ],
+                      "cookie": [],
+                      "body": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Create a article",
               "request": {
                 "method": "POST",
