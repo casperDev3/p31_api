@@ -59,30 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.0904_restructure.executor": "Run",
-    "Python.base_func_0404.executor": "Run",
-    "Python.jwt_0704.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.r&p_1104.executor": "Run",
-    "Python.rest api.executor": "Run",
-    "Python.security.executor": "Run",
-    "Python.test activity.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.auto_save.executor": "Run",
-    "Shell Script.intall_libs.executor": "Run",
-    "Shell Script.refresh_libs.executor": "Run",
-    "git-widget-placeholder": "r&&p-pv31-1104",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.0904_restructure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.base_func_0404.executor&quot;: &quot;Run&quot;,
+    &quot;Python.jwt_0704.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.r&amp;p_1104.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rest api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.security.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test activity.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.auto_save.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.intall_libs.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.refresh_libs.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;r&amp;&amp;p-pv31-1104&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/0904_restructure/schemas" />
