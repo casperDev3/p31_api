@@ -138,6 +138,8 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True, # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
 }
 
+from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
+
 UNFOLD = {
     'SITE_TITLE': 'Адмін-панель Новин',
     'SITE_HEADER': 'Адмін-панель Новин',
@@ -161,32 +163,28 @@ UNFOLD = {
     'DASHBOARD': {
         'widgets': [
             {
-                'wrapper_class': 'col-span-full',
+                'wrapper_class': 'col-span-full', # Статистика на всю ширину зверху
                 'widget_class': 'unfold.widgets.WidgetStatsControl',
                 'args': {
-                    'stats': lambda request: [
-                        {
-                            'label': 'Статті',
-                            'number': '124',
-                            'header_icon': 'article',
-                            'color': 'primary',
-                        },
-                        {
-                            'label': 'Категорії',
-                            'number': '8',
-                            'header_icon': 'category',
-                        },
-                        {
-                            'label': 'Користувачі',
-                            'number': '12',
-                            'header_icon': 'person',
-                        },
-                        {
-                            'label': 'Теги',
-                            'number': '24',
-                            'header_icon': 'sell',
-                        },
-                    ],
+                    'stats': get_dashboard_stats,
+                },
+            },
+            {
+                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-8', # Великий графік зліва
+                'widget_class': 'unfold.widgets.WidgetChartBar',
+                'args': lambda request: {
+                    'title': 'Динаміка публікацій',
+                    'subtitle': 'Кількість доданих новин по місяцях',
+                    'data': get_activity_chart(request),
+                },
+            },
+            {
+                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-4', # Круговий або лінійний графік справа
+                'widget_class': 'unfold.widgets.WidgetChartLine',
+                'args': lambda request: {
+                    'title': 'Аналітика категорій',
+                    'subtitle': 'Популярність рубрик',
+                    'data': get_categories_chart(request),
                 },
             },
         ],
