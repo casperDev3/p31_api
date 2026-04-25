@@ -16,6 +16,10 @@ class Article(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = "Стаття"
+        verbose_name_plural = "Статті"
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Назва категорії")
@@ -23,9 +27,17 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Категорія"
+        verbose_name_plural = "Категорії"
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=100, verbose_name="Назва тегу")
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = "Тег"
+        verbose_name_plural = "Теги"

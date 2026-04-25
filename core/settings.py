@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk'
 
 TIME_ZONE = 'UTC'
 
@@ -139,9 +139,9 @@ SIMPLE_JWT = {
 }
 
 UNFOLD = {
-    'SITE_TITLE': _('News API Admin'),
-    'SITE_HEADER': _('News API Admin'),
-    'SITE_SYMBOL': 'news',
+    'SITE_TITLE': 'Адмін-панель Новин',
+    'SITE_HEADER': 'Адмін-панель Новин',
+    'SITE_SYMBOL': 'newspaper',
     'SHOW_HISTORY': True,
     "COLORS": {
         "primary": {
@@ -158,21 +158,92 @@ UNFOLD = {
             "950": "59 7 100",
         },
     },
-    # 'SIDEBAR': {
-    #     'show_search': True,
-    #     'show_all_applications': True,
-    #     'navigation': [
-    #         {
-    #             'label': _('News'),
-    #             'icon': 'newspaper',
-    #             'url': reverse_lazy('admin:news_news_changelist'),
-    #         },
-    #         {
-    #             'label': _('Authentication'),
-    #             'icon': 'users',
-    #             'url': reverse_lazy('admin:auth_user_changelist'),
-    #         },
-    #     ],
-    # },
+    'DASHBOARD': {
+        'widgets': [
+            {
+                'wrapper_class': 'col-span-full',
+                'widget_class': 'unfold.widgets.WidgetStatsControl',
+                'args': {
+                    'stats': lambda request: [
+                        {
+                            'label': 'Статті',
+                            'number': '124',
+                            'header_icon': 'article',
+                            'color': 'primary',
+                        },
+                        {
+                            'label': 'Категорії',
+                            'number': '8',
+                            'header_icon': 'category',
+                        },
+                        {
+                            'label': 'Користувачі',
+                            'number': '12',
+                            'header_icon': 'person',
+                        },
+                        {
+                            'label': 'Теги',
+                            'number': '24',
+                            'header_icon': 'sell',
+                        },
+                    ],
+                },
+            },
+        ],
+    },
+    'SIDEBAR': {
+        'show_search': True,
+        'show_all_applications': True,
+        'navigation': [
+            {
+                'title': 'Головна',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Дашборд',
+                        'icon': 'dashboard',
+                        'link': reverse_lazy('admin:index'),
+                    },
+                ],
+            },
+            {
+                'title': 'Новини',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Статті',
+                        'icon': 'article',
+                        'link': reverse_lazy('admin:news_article_changelist'),
+                    },
+                    {
+                        'title': 'Категорії',
+                        'icon': 'category',
+                        'link': reverse_lazy('admin:news_category_changelist'),
+                    },
+                    {
+                        'title': 'Теги',
+                        'icon': 'sell',
+                        'link': reverse_lazy('admin:news_tag_changelist'),
+                    },
+                ],
+            },
+            {
+                'title': 'Користувачі та групи',
+                'separator': True,
+                'items': [
+                    {
+                        'title': 'Користувачі',
+                        'icon': 'person',
+                        'link': reverse_lazy('admin:auth_user_changelist'),
+                    },
+                    {
+                        'title': 'Групи',
+                        'icon': 'group',
+                        'link': reverse_lazy('admin:auth_group_changelist'),
+                    },
+                ],
+            },
+        ],
+    },
 
 }
