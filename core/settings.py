@@ -1,6 +1,7 @@
 from pathlib import Path
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -127,6 +128,14 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=14),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    'ROTATE_REFRESH_TOKENS': False, # Не оновлювати refresh токени при кожному запиті на оновлення
+    'BLACKLIST_AFTER_ROTATION': False, # Не додавати старі refresh токени до чорного списку після оновлення
+    'UPDATE_LAST_LOGIN': True, # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
 }
 
 UNFOLD = {

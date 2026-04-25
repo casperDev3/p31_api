@@ -2,6 +2,7 @@ from rest_framework import viewsets, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Article, Category, Tag
 from .serializers import ArticleSerializer, CategorySerializer, TagSerializer
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
@@ -15,13 +16,19 @@ class ArticleViewSet(viewsets.ModelViewSet):
     ordering_fields = ['created_date', 'title'] # Сортування за датою створення та заголовком
     ordering = ['-created_date'] # За замовчуванням сортувати за датою створення у спадному порядку
 
+    permission_classes = [IsAuthenticatedOrReadOnly]
+
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
+    permission_classes = [IsAuthenticated]
+
 
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
     serializer_class = TagSerializer
+
+    permission_classes = [AllowAny]
