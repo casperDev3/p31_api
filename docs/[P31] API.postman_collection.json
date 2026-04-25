@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "21da702f-3deb-4970-8f28-20c673d1f22d",
+    "_postman_id": "25702b7f-e693-478b-a8f8-5fed5e106184",
     "name": "[P31] API",
     "description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "32590352",
-    "_collection_link": "https://go.postman.co/collection/32590352-21da702f-3deb-4970-8f28-20c673d1f22d?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/32590352-25702b7f-e693-478b-a8f8-5fed5e106184?source=collection_link"
   },
   "item": [
     {
@@ -67,7 +67,7 @@
                   },
                   "status": "Not Found",
                   "code": 404,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -116,7 +116,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -174,10 +174,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}/users/",
                       "host": [
@@ -191,7 +187,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -218,10 +214,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}/users?adult=True",
                       "host": [
@@ -240,7 +232,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -299,10 +291,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}/users/",
                       "host": [
@@ -316,7 +304,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -372,10 +360,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"name\": \"John\",\n    \"email\": \"john@doe.com\",\n    \"age\": 33\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}/users/",
                       "host": [
@@ -389,7 +373,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -490,7 +474,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -535,7 +519,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -580,7 +564,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -625,7 +609,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -670,7 +654,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -719,7 +703,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -764,7 +748,7 @@
                   },
                   "status": "Bad Request",
                   "code": 400,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -835,7 +819,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -881,7 +865,7 @@
                   },
                   "status": "Not Found",
                   "code": 404,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -1037,10 +1021,6 @@
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": "{\n    \"old_password\": \"123456Q\",\n    \"new_password\": \"123456P\"\n}"
-                        },
                         "url": {
                           "raw": "{{base_url}}{{prefix}}/users/system-info",
                           "host": [
@@ -1054,7 +1034,7 @@
                       },
                       "status": "Forbidden",
                       "code": 403,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
                         {
                           "key": "date",
@@ -1187,7 +1167,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -1264,7 +1244,7 @@
                   },
                   "status": "Bad Request",
                   "code": 400,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -1313,7 +1293,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "date",
@@ -1639,6 +1619,20 @@
               "item": [
                 {
                   "name": "Create a category",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test('Status code is 201', function () { pm.response.to.have.status(201); });",
+                          "pm.test('Response body contains created category fields', function () { const data = pm.response.json(); pm.expect(data).to.have.property('id'); pm.expect(data.id).to.be.a('number'); pm.expect(data).to.have.property('name'); pm.expect(data.name).to.eql('Технології'); });"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
                   "request": {
                     "method": "POST",
                     "header": [],
@@ -1692,18 +1686,48 @@
                       },
                       "status": "Created",
                       "code": 201,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:13:57 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "31" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:13:57 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, POST, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "31"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"Технології\"\n}"
@@ -1712,6 +1736,21 @@
                 },
                 {
                   "name": "Get categories",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                          "pm.test('Response is an array of categories', function () { const data = pm.response.json(); pm.expect(data).to.be.an('array'); data.forEach(function (item) { pm.expect(item).to.have.property('id'); pm.expect(item.id).to.be.a('number'); pm.expect(item).to.have.property('name'); pm.expect(item.name).to.be.a('string'); }); });",
+                          "pm.test('Categories list is not empty', function () { const data = pm.response.json(); pm.expect(data.length).to.be.above(0); });"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -1740,10 +1779,6 @@
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{base_url_local}}{{prefix}}/news/categories/",
                           "host": [
@@ -1758,18 +1793,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:14:40 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "63" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:14:40 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, POST, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "63"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Технології\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Спорт\"\n    }\n]"
@@ -1778,6 +1843,20 @@
                 },
                 {
                   "name": "Get a category",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                          "pm.test('Response body contains requested category', function () { const data = pm.response.json(); const requestedId = Number(pm.variables.get('id') || pm.request.url.variables.get('id')); pm.expect(data).to.have.property('id'); pm.expect(data.id).to.be.a('number'); if (!Number.isNaN(requestedId)) { pm.expect(data.id).to.eql(requestedId); } pm.expect(data).to.have.property('name'); pm.expect(data.name).to.be.a('string').and.not.empty; });"
+                        ],
+                        "type": "text/javascript",
+                        "packages": {},
+                        "requests": {}
+                      }
+                    }
+                  ],
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -1813,10 +1892,6 @@
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{base_url_local}}{{prefix}}/news/categories/:id/",
                           "host": [
@@ -1838,18 +1913,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:16:57 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "29" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:16:57 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "29"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"Технології\"\n}"
@@ -1858,6 +1963,18 @@
                 },
                 {
                   "name": "Update a category",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                          "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                          "pm.test('Updated category is returned', function () { const data = pm.response.json(); const requestedId = Number(pm.variables.get('id') || pm.request.url.variables.get('id')); pm.expect(data).to.have.property('id'); if (!Number.isNaN(requestedId)) { pm.expect(data.id).to.eql(requestedId); } pm.expect(data).to.have.property('name'); pm.expect(data.name).to.eql('Наука'); });"
+                        ]
+                      }
+                    }
+                  ],
                   "request": {
                     "method": "PUT",
                     "header": [],
@@ -1925,18 +2042,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:20:04 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "26" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:20:04 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "26"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"Наука\"\n}"
@@ -1945,6 +2092,18 @@
                 },
                 {
                   "name": "Delete a category",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                          "pm.test('Status code is 204', function () { pm.response.to.have.status(204); });",
+                          "pm.test('Response body is empty', function () { pm.expect(pm.response.text()).to.eql(''); });"
+                        ]
+                      }
+                    }
+                  ],
                   "request": {
                     "method": "DELETE",
                     "header": [],
@@ -2002,20 +2161,47 @@
                       },
                       "status": "No Content",
                       "code": 204,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:22:51 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "0" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:22:51 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
-                      "body": null
+                      "body": ""
                     }
                   ]
                 }
@@ -2079,18 +2265,48 @@
                       },
                       "status": "Created",
                       "code": 201,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:13:57 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "25" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:13:57 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, POST, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "25"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"python\"\n}"
@@ -2127,10 +2343,6 @@
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{base_url_local}}{{prefix}}/news/tags/",
                           "host": [
@@ -2145,18 +2357,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:14:40 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, POST, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "55" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:14:40 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, POST, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "55"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "[\n    {\n        \"id\": 1,\n        \"name\": \"python\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"django\"\n    }\n]"
@@ -2200,10 +2442,6 @@
                       "originalRequest": {
                         "method": "GET",
                         "header": [],
-                        "body": {
-                          "mode": "raw",
-                          "raw": ""
-                        },
                         "url": {
                           "raw": "{{base_url_local}}{{prefix}}/news/tags/:id/",
                           "host": [
@@ -2225,18 +2463,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:16:57 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "23" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:16:57 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "23"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"python\"\n}"
@@ -2312,18 +2580,48 @@
                       },
                       "status": "OK",
                       "code": 200,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:20:04 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Content-Type", "value": "application/json" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "30" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:20:04 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "30"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
                       "body": "{\n    \"id\": 1,\n    \"name\": \"django-rest\"\n}"
@@ -2389,20 +2687,47 @@
                       },
                       "status": "No Content",
                       "code": 204,
-                      "_postman_previewlanguage": null,
+                      "_postman_previewlanguage": "Text",
                       "header": [
-                        { "key": "Date", "value": "Tue, 21 Apr 2026 17:22:51 GMT" },
-                        { "key": "Server", "value": "WSGIServer/0.2 CPython/3.13.7" },
-                        { "key": "Vary", "value": "Accept, Cookie" },
-                        { "key": "Allow", "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS" },
-                        { "key": "X-Frame-Options", "value": "DENY" },
-                        { "key": "Content-Length", "value": "0" },
-                        { "key": "X-Content-Type-Options", "value": "nosniff" },
-                        { "key": "Referrer-Policy", "value": "same-origin" },
-                        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" }
+                        {
+                          "key": "Date",
+                          "value": "Tue, 21 Apr 2026 17:22:51 GMT"
+                        },
+                        {
+                          "key": "Server",
+                          "value": "WSGIServer/0.2 CPython/3.13.7"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Accept, Cookie"
+                        },
+                        {
+                          "key": "Allow",
+                          "value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+                        },
+                        {
+                          "key": "X-Frame-Options",
+                          "value": "DENY"
+                        },
+                        {
+                          "key": "Content-Length",
+                          "value": "0"
+                        },
+                        {
+                          "key": "X-Content-Type-Options",
+                          "value": "nosniff"
+                        },
+                        {
+                          "key": "Referrer-Policy",
+                          "value": "same-origin"
+                        },
+                        {
+                          "key": "Cross-Origin-Opener-Policy",
+                          "value": "same-origin"
+                        }
                       ],
                       "cookie": [],
-                      "body": null
+                      "body": ""
                     }
                   ]
                 }
@@ -2410,12 +2735,26 @@
             },
             {
               "name": "Create a article",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "pm.test('Status code is 201', function () { pm.response.to.have.status(201); });",
+                      "pm.test('Created article payload matches request intent', function () { const data = pm.response.json(); pm.expect(data).to.have.property('id'); pm.expect(data.id).to.be.a('number'); pm.expect(data).to.have.property('title', '1'); pm.expect(data).to.have.property('content', '1'); pm.expect(data).to.have.property('created_date'); pm.expect(data.created_date).to.be.a('string'); pm.expect(data).to.have.property('author'); pm.expect(data).to.have.property('category'); });"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
               "request": {
                 "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"title\": \"1\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}",
+                  "raw": "{\n    \"title\": \"2\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -2461,7 +2800,7 @@
                   },
                   "status": "Created",
                   "code": 201,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -2511,6 +2850,20 @@
             },
             {
               "name": "Get news",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                      "pm.test('Response is a list of articles', function () { const data = pm.response.json(); pm.expect(data).to.be.an('array'); data.forEach(function (item) { pm.expect(item).to.have.property('id'); pm.expect(item.id).to.be.a('number'); pm.expect(item).to.have.property('title'); pm.expect(item.title).to.be.a('string'); pm.expect(item).to.have.property('content'); pm.expect(item.content).to.be.a('string'); pm.expect(item).to.have.property('created_date'); }); });"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2522,13 +2875,19 @@
                   "raw": ""
                 },
                 "url": {
-                  "raw": "{{base_url_local}}{{prefix}}/news/",
+                  "raw": "{{base_url_local}}{{prefix}}/news/?ordering=-title",
                   "host": [
                     "{{base_url_local}}{{prefix}}"
                   ],
                   "path": [
                     "news",
                     ""
+                  ],
+                  "query": [
+                    {
+                      "key": "ordering",
+                      "value": "-title"
+                    }
                   ]
                 }
               },
@@ -2538,10 +2897,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"title\": \"1\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}{{prefix}}/news/",
                       "host": [
@@ -2555,7 +2910,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -2600,6 +2955,454 @@
                   ],
                   "cookie": [],
                   "body": "[\n    {\n        \"id\": 3,\n        \"title\": \"1\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T17:13:57.859444Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"ds\",\n        \"content\": \"ads\",\n        \"created_date\": \"2026-04-21T17:05:01.387374Z\",\n        \"author\": null,\n        \"image\": null,\n        \"tags\": null,\n        \"category\": null\n    },\n    {\n        \"id\": 1,\n        \"title\": \"тест\",\n        \"content\": \"тестовий опис\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": null,\n        \"image\": null,\n        \"tags\": null,\n        \"category\": null\n    }\n]"
+                },
+                {
+                  "name": "[200] Filter by category",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?category=1",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "category",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:20:01 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
+                },
+                {
+                  "name": "[200] Filter by Author",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?author=1",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "author",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:21:02 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
+                },
+                {
+                  "name": "[200] Complex Filters",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?author=1&category=1",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "author",
+                          "value": "1"
+                        },
+                        {
+                          "key": "category",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:21:55 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "135"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
+                },
+                {
+                  "name": "[200] Search by query (title, content)",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?search=2",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "search",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:23:26 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "267"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 4,\n        \"title\": \"2\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-25T08:23:09.836780Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    },\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
+                },
+                {
+                  "name": "[200] Sort by created date - ASC",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?ordering=-created_date",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "ordering",
+                          "value": "-created_date"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:25:51 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "405"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    },\n    {\n        \"id\": 2,\n        \"title\": \"ds\",\n        \"content\": \"ads\",\n        \"created_date\": \"2026-04-21T17:05:01.387374Z\",\n        \"author\": null,\n        \"image\": null,\n        \"tags\": null,\n        \"category\": null\n    },\n    {\n        \"id\": 4,\n        \"title\": \"2\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-25T08:23:09.836780Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
+                },
+                {
+                  "name": "[200] Sort by title - DESC",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": ""
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/?ordering=-title",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ],
+                      "query": [
+                        {
+                          "key": "ordering",
+                          "value": "-title"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 08:27:44 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept, Cookie"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "405"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 2,\n        \"title\": \"ds\",\n        \"content\": \"ads\",\n        \"created_date\": \"2026-04-21T17:05:01.387374Z\",\n        \"author\": null,\n        \"image\": null,\n        \"tags\": null,\n        \"category\": null\n    },\n    {\n        \"id\": 4,\n        \"title\": \"2\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-25T08:23:09.836780Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    },\n    {\n        \"id\": 1,\n        \"title\": \"123\",\n        \"content\": \"1\",\n        \"created_date\": \"2026-04-21T16:11:40.309168Z\",\n        \"author\": \"1\",\n        \"image\": null,\n        \"tags\": \"1\",\n        \"category\": \"1\"\n    }\n]"
                 }
               ]
             },
@@ -2649,7 +3452,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -2699,6 +3502,18 @@
             },
             {
               "name": "Get an article",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                      "pm.test('Response contains article fields', function () { const data = pm.response.json(); const requestedId = Number(pm.variables.get('id') || pm.request.url.variables.get('id')); pm.expect(data).to.have.property('id'); pm.expect(data.id).to.be.a('number'); if (!Number.isNaN(requestedId)) { pm.expect(data.id).to.eql(requestedId); } pm.expect(data).to.have.property('title'); pm.expect(data.title).to.be.a('string'); pm.expect(data).to.have.property('content'); pm.expect(data.content).to.be.a('string'); pm.expect(data).to.have.property('created_date'); });"
+                    ]
+                  }
+                }
+              ],
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2732,10 +3547,6 @@
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"title\": \"1\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}"
-                    },
                     "url": {
                       "raw": "{{base_url_local}}{{prefix}}/news/:id",
                       "host": [
@@ -2755,7 +3566,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -2805,6 +3616,18 @@
             },
             {
               "name": "Update an article",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+                      "pm.test('Updated article is returned', function () { const data = pm.response.json(); const requestedId = Number(pm.variables.get('id') || pm.request.url.variables.get('id')); pm.expect(data).to.have.property('id'); if (!Number.isNaN(requestedId)) { pm.expect(data.id).to.eql(requestedId); } pm.expect(data).to.have.property('title', '123'); pm.expect(data).to.have.property('content', '1'); pm.expect(data).to.have.property('created_date'); });"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "PUT",
                 "header": [],
@@ -2870,7 +3693,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -2978,7 +3801,7 @@
                   },
                   "status": "OK",
                   "code": 200,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -3028,6 +3851,18 @@
             },
             {
               "name": "Delete an article",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status code is 204', function () { pm.response.to.have.status(204); });",
+                      "pm.test('Response body is empty', function () { pm.expect(pm.response.text()).to.eql(''); });"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "DELETE",
                 "header": [],
@@ -3083,7 +3918,7 @@
                   },
                   "status": "No Content",
                   "code": 204,
-                  "_postman_previewlanguage": null,
+                  "_postman_previewlanguage": "Text",
                   "header": [
                     {
                       "key": "Date",
@@ -3123,7 +3958,7 @@
                     }
                   ],
                   "cookie": [],
-                  "body": null
+                  "body": ""
                 }
               ]
             }
@@ -3147,7 +3982,8 @@
       "script": {
         "type": "text/javascript",
         "exec": [
-          ""
+          "pm.test('Response time is acceptable', function () { pm.expect(pm.response.responseTime).to.be.below(2000); });",
+          "pm.test('Response has a valid status code', function () { pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204]); });"
         ]
       }
     }

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # installed apps
     'rest_framework',
+    'django_filters',
     # custom apps
     'news'
 ]
