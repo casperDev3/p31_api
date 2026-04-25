@@ -1755,6 +1755,16 @@
                     "disableBodyPruning": true
                   },
                   "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc4MzIxOTMyLCJpYXQiOjE3NzcxMTIzMzIsImp0aSI6Ijg0MTkyZjU0MTBhMjRlNWZiYmEzMjlhMDZhZDgzZGVkIiwidXNlcl9pZCI6IjcifQ.3rG8mq2aEXWh58vpETrg0XNhrtKgDqeJTyuOpPQnLUc",
+                          "type": "string"
+                        }
+                      ]
+                    },
                     "method": "GET",
                     "header": [],
                     "body": {
@@ -2750,11 +2760,21 @@
                 }
               ],
               "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MTExODY2LCJpYXQiOjE3NzcxMTE1NjYsImp0aSI6ImZjZjBiN2I1ZmFiZDRiZTdhNjMzZGUzYzhiYmVhNGY5IiwidXNlcl9pZCI6IjcifQ.XjkRmYNzg95pUaukrYepAOoYC89jMCa8o6b1GWUgteE",
+                      "type": "string"
+                    }
+                  ]
+                },
                 "method": "POST",
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"title\": \"2\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}",
+                  "raw": "{\n    \"title\": \"22\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -2845,6 +2865,83 @@
                   ],
                   "cookie": [],
                   "body": "{\n    \"id\": 3,\n    \"title\": \"1\",\n    \"content\": \"1\",\n    \"created_date\": \"2026-04-21T17:13:57.859444Z\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}"
+                },
+                {
+                  "name": "[401] No Auth",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"title\": \"22\",\n    \"content\": \"1\",\n    \"author\": \"1\",\n    \"image\": null,\n    \"tags\": \"1\",\n    \"category\": \"1\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/news/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "news",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 10:05:10 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Bearer realm=\"api\""
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "GET, POST, HEAD, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "58"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"detail\": \"Authentication credentials were not provided.\"\n}"
                 }
               ]
             },
@@ -3855,15 +3952,27 @@
                 {
                   "listen": "test",
                   "script": {
-                    "type": "text/javascript",
                     "exec": [
                       "pm.test('Status code is 204', function () { pm.response.to.have.status(204); });",
                       "pm.test('Response body is empty', function () { pm.expect(pm.response.text()).to.eql(''); });"
-                    ]
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
                   }
                 }
               ],
               "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MTExODY2LCJpYXQiOjE3NzcxMTE1NjYsImp0aSI6ImZjZjBiN2I1ZmFiZDRiZTdhNjMzZGUzYzhiYmVhNGY5IiwidXNlcl9pZCI6IjcifQ.XjkRmYNzg95pUaukrYepAOoYC89jMCa8o6b1GWUgteE",
+                      "type": "string"
+                    }
+                  ]
+                },
                 "method": "DELETE",
                 "header": [],
                 "body": {
@@ -3883,7 +3992,7 @@
                   "variable": [
                     {
                       "key": "id",
-                      "value": "3"
+                      "value": "5"
                     }
                   ]
                 }
@@ -3959,6 +4068,400 @@
                   ],
                   "cookie": [],
                   "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "Register user",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\": \"student_07\",\n    \"email\": \"student_07@step.com\",\n    \"password\": \"StrongPassword123!\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url_local}}{{prefix}}/auth/register/",
+                  "host": [
+                    "{{base_url_local}}{{prefix}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "register",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "[200] Success response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"username\": \"student_07\",\n    \"email\": \"student_07@step.com\",\n    \"password\": \"StrongPassword123!\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/auth/register/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "register",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 10:11:33 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "POST, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "93"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"username\": \"student_07\",\n    \"email\": \"student_07@step.com\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Login a user",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"username\": \"student_06\",\n    // \"email\": \"student_05@step.com\",\n    \"password\": \"StrongPassword123!\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url_local}}{{prefix}}/auth/login/",
+                  "host": [
+                    "{{base_url_local}}{{prefix}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "login",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "[200] Success Response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"username\": \"student_06\",\n    // \"email\": \"student_05@step.com\",\n    \"password\": \"StrongPassword123!\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/auth/login/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "login",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 10:13:35 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "POST, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "489"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3NzE5ODQxNSwiaWF0IjoxNzc3MTEyMDE1LCJqdGkiOiI3OGEyMjUzNTRkNTM0ZWYyODEwNzYwMjk3MjBlYTEyOSIsInVzZXJfaWQiOiI3In0.AyVN3gOqyMS1cirn7NpvO25VY6R-N9-zp1iRc62JiTk\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MTEyMzE1LCJpYXQiOjE3NzcxMTIwMTUsImp0aSI6IjRhM2JhZmQ3ZGYzODQ2NTU5ODkyM2JkZWU1ZTBkMzY1IiwidXNlcl9pZCI6IjcifQ.ms-KMrMC3pwLLn1tQq-q7oXKczTSYempYwIv_SOmitg\"\n}"
+                },
+                {
+                  "name": "[401] No Active Account",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"username\": \"student_04\",\n    \"password\": \"StrongPassword123!\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/auth/login/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "login",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 09:05:15 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "WWW-Authenticate",
+                      "value": "Bearer realm=\"api\""
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "POST, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "63"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"detail\": \"No active account found with the given credentials\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Refresh token",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3NzE5ODQxNSwiaWF0IjoxNzc3MTEyMDE1LCJqdGkiOiI3OGEyMjUzNTRkNTM0ZWYyODEwNzYwMjk3MjBlYTEyOSIsInVzZXJfaWQiOiI3In0.AyVN3gOqyMS1cirn7NpvO25VY6R-N9-zp1iRc62JiTk\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url_local}}{{prefix}}/auth/token/refresh/",
+                  "host": [
+                    "{{base_url_local}}{{prefix}}"
+                  ],
+                  "path": [
+                    "auth",
+                    "token",
+                    "refresh",
+                    ""
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "[200] Success Response",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc3NzE5ODQxNSwiaWF0IjoxNzc3MTEyMDE1LCJqdGkiOiI3OGEyMjUzNTRkNTM0ZWYyODEwNzYwMjk3MjBlYTEyOSIsInVzZXJfaWQiOiI3In0.AyVN3gOqyMS1cirn7NpvO25VY6R-N9-zp1iRc62JiTk\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{base_url_local}}{{prefix}}/auth/token/refresh/",
+                      "host": [
+                        "{{base_url_local}}{{prefix}}"
+                      ],
+                      "path": [
+                        "auth",
+                        "token",
+                        "refresh",
+                        ""
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": "Date",
+                      "value": "Sat, 25 Apr 2026 10:14:11 GMT"
+                    },
+                    {
+                      "key": "Server",
+                      "value": "WSGIServer/0.2 CPython/3.13.7"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept"
+                    },
+                    {
+                      "key": "Allow",
+                      "value": "POST, OPTIONS"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "DENY"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "244"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "Referrer-Policy",
+                      "value": "same-origin"
+                    },
+                    {
+                      "key": "Cross-Origin-Opener-Policy",
+                      "value": "same-origin"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzc3MTEyMzUxLCJpYXQiOjE3NzcxMTIwNTEsImp0aSI6ImEwNWE4ZjdmYWIyYTRkZTliNzg4YTcyYmJjYWE4NDZjIiwidXNlcl9pZCI6IjcifQ.qSnKqUHpdRehGFCadz7ufXhIG33Z6htdQRvzw-5oIWY\"\n}"
                 }
               ]
             }
