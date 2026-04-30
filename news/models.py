@@ -15,7 +15,7 @@ class Article(models.Model):
         on_delete=models.CASCADE, # Якщо користувач видаляється, видаляються і його статті
         null=True,
     )
-    image = models.ImageField(upload_to='articles/', null=True, blank=True, verbose_name="Зображення")
+    image = models.ImageField(upload_to='articles/%Y/%m/', null=True, blank=True, verbose_name="Зображення")
     tags = models.CharField(max_length=200, null=True, blank=True, verbose_name="Теги",
                             help_text="Введіть теги через кому")
 

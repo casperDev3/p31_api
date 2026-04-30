@@ -18,6 +18,9 @@ class ArticleViewSet(viewsets.ModelViewSet):
 
     permission_classes = [IsAuthenticatedOrReadOnly]
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
