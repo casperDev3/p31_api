@@ -24,6 +24,7 @@ DEBUG = environ.Env(
     DEBUG=(bool, False)
 )
 
+
 ALLOWED_HOSTS = [
     environ.Env(
         ALLOWED_HOSTS=(list, ['localhost'])
