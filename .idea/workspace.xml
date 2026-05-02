@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal" />
+    <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
+      <change afterPath="$PROJECT_DIR$/news/permissions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,11 +72,11 @@
     "Shell Script.migrate.executor": "Run",
     "Shell Script.refresh_libs.executor": "Run",
     "Shell Script.run_server.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dj-permissions-deploy-p31-0205",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Shell Script.migrate">
+  <component name="RunManager" selected="Shell Script.auto_save">
     <configuration name="auto_save" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="git add . &amp;&amp; git commit -m&quot;[auto_save] Push completed code&quot; &amp;&amp; git push" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -250,6 +255,11 @@
           <url>file://$PROJECT_DIR$/core/settings.py</url>
           <line>250</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/news/views.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
