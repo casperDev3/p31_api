@@ -3,10 +3,17 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from datetime import timedelta
 import os
-import environ
+# import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# env = environ.Env(
+#     DEBUG=(bool, False),
+#     SECRET_KEY=(str, 'django-insecure-!@#your-test-secret-key-h'),
+#     ALLOWED_HOSTS=(list, ['localhost']),
+# )
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -15,21 +22,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = environ.Env(
-    SECRET_KEY=(str, 'django-insecure-!@#your-test-secret-key-h')
-)
+SECRET_KEY = "django-insecure-*4(ib1)cugp4^30bi(*e%5%8cd0$x$tw9*9cl0elcuqd0zk9re"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = environ.Env(
-    DEBUG=(bool, False)
-)
+DEBUG = False
 
 
-ALLOWED_HOSTS = [
-    environ.Env(
-        ALLOWED_HOSTS=(list, ['localhost'])
-    )
-]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
