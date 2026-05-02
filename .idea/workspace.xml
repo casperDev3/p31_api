@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
-      <change afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
     </list>
@@ -163,11 +162,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="true" />
       <option name="EXECUTE_SCRIPT_FILE" value="false" />
-      <envs>
-        <env name="ALLOWED_HOSTS" value="api.p31.casper.dev,localhost,127.0.0.0" />
-        <env name="DEBUG" value="False" />
-        <env name="SECRET_KEY" value="django-insecure-*4(ib1)cugp4^30bi(*e%5%8cd0$x$tw9*9cl0elcuqd0zk9re" />
-      </envs>
+      <envs />
       <method v="2" />
     </configuration>
     <list>
@@ -256,7 +251,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/core/settings.py</url>
-          <line>250</line>
+          <line>260</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">

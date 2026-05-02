@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 from datetime import timedelta
 import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,12 +15,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = environ.Env(
+    SECRET_KEY=(str, 'django-insecure-!@#your-test-secret-key-h')
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = environ.Env(
+    DEBUG=(bool, False)
+)
 
-ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = [
+    environ.Env(
+        ALLOWED_HOSTS=(list, ['localhost'])
+    )
+]
 
 # Application definition
 
@@ -137,9 +146,10 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=14),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
-    'ROTATE_REFRESH_TOKENS': False, # Не оновлювати refresh токени при кожному запиті на оновлення
-    'BLACKLIST_AFTER_ROTATION': False, # Не додавати старі refresh токени до чорного списку після оновлення
-    'UPDATE_LAST_LOGIN': True, # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
+    'ROTATE_REFRESH_TOKENS': False,  # Не оновлювати refresh токени при кожному запиті на оновлення
+    'BLACKLIST_AFTER_ROTATION': False,  # Не додавати старі refresh токени до чорного списку після оновлення
+    'UPDATE_LAST_LOGIN': True,
+    # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
 }
 
 from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
@@ -167,14 +177,14 @@ UNFOLD = {
     'DASHBOARD': {
         'widgets': [
             {
-                'wrapper_class': 'col-span-full', # Статистика на всю ширину зверху
+                'wrapper_class': 'col-span-full',  # Статистика на всю ширину зверху
                 'widget_class': 'unfold.widgets.WidgetStatsControl',
                 'args': {
                     'stats': get_dashboard_stats,
                 },
             },
             {
-                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-8', # Великий графік зліва
+                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-8',  # Великий графік зліва
                 'widget_class': 'unfold.widgets.WidgetChartBar',
                 'args': lambda request: {
                     'title': 'Динаміка публікацій',
@@ -183,7 +193,7 @@ UNFOLD = {
                 },
             },
             {
-                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-4', # Круговий або лінійний графік справа
+                'wrapper_class': 'col-span-full md:col-span-6 lg:col-span-4',  # Круговий або лінійний графік справа
                 'widget_class': 'unfold.widgets.WidgetChartLine',
                 'args': lambda request: {
                     'title': 'Аналітика категорій',
@@ -249,5 +259,3 @@ UNFOLD = {
     },
 
 }
-
-
