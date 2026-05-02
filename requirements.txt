@@ -5,6 +5,7 @@ asgiref==3.11.1
 bcrypt==4.0.1
 click==8.3.1
 Django==6.0.4
+django-environ==0.13.0
 django-filter==25.2
 django-unfold==0.90.0
 djangorestframework==3.17.1
