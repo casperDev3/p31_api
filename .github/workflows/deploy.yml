@@ -1,0 +1,19 @@
+name: Deploy P31 API to VPS
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute SSH commands on VPS
+        uses: appleboy/ssh-action@V1.0.3
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          script: |
+              cd /var/www
