@@ -36,3 +36,19 @@ class Query(graphene.ObjectType):
             return WorkShop.objects.get(name=name)
         except WorkShop.DoesNotExist:
             return None
+
+# --     GraphQL Mutations
+class CreateAttendanceMutation(graphene.Mutation):
+    class Arguments:
+        worker_id = graphene.ID(required=True)
+
+    success = graphene.Boolean()
+
+    @classmethod
+    def mutate(cls, root, info, worker_id):
+        worker = Worker.objects.get(pk=worker_id)
+        Attendance.objects.create(worker=worker)
+        return CreateAttendanceMutation().success
+
+class Mutation(graphene.ObjectType):
+    make_attendance = CreateAttendanceMutation.Field()

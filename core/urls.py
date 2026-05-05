@@ -9,7 +9,7 @@ PREFIX = 'api/v1'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
+    path(f'{PREFIX}/graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path(f'{PREFIX}/news/', include('news.urls')),
     path(f'{PREFIX}/auth/', include('authentication.urls')),
 ]

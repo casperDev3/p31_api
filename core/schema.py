@@ -4,8 +4,8 @@ import factory.schema
 class Query(factory.schema.Query, graphene.ObjectType):
     pass
 
-class Mutation(graphene.ObjectType):
+class Mutation(factory.schema.Mutation, graphene.ObjectType):
     pass
 
-shema = graphene.Schema(query=Query, mutation=Mutation)
+schema = graphene.Schema(query=Query, mutation=Mutation)
 
