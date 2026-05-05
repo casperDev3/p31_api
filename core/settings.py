@@ -42,12 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # installed apps
+    'graphene_django',
     'rest_framework',
     'django_filters',
     'rest_framework_simplejwt',
     # custom apps
     'news',
-    'authentication'
+    'authentication',
+    'factory'
 ]
 
 MIDDLEWARE = [
@@ -140,6 +142,10 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': False, # Не оновлювати refresh токени при кожному запиті на оновлення
     'BLACKLIST_AFTER_ROTATION': False, # Не додавати старі refresh токени до чорного списку після оновлення
     'UPDATE_LAST_LOGIN': True, # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
+}
+
+GRAPHENE = {
+    'SCHEMA': 'core.schema.schema',
 }
 
 from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
