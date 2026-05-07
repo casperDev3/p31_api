@@ -1,7 +1,8 @@
 import graphene
 import factory.schema
+import news.schema
 
-class Query(factory.schema.Query, graphene.ObjectType):
+class Query(news.schema.Query, factory.schema.Query, graphene.ObjectType):
     pass
 
 class Mutation(factory.schema.Mutation, graphene.ObjectType):

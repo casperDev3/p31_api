@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
+      <change afterPath="$PROJECT_DIR$/news/schema.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.rest api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test activity.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Shell Script.Run Server.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.auto_save.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.intall_libs.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.make_migrations.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.migrate.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.refresh_libs.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.run_server.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dj-graphQL-p31-0505&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main (1).executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.rest api.executor": "Run",
+    "Python.test activity.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.Run Server.executor": "Run",
+    "Shell Script.Unnamed.executor": "Run",
+    "Shell Script.auto_save.executor": "Run",
+    "Shell Script.intall_libs.executor": "Run",
+    "Shell Script.make_migrations.executor": "Run",
+    "Shell Script.migrate.executor": "Run",
+    "Shell Script.refresh_libs.executor": "Run",
+    "Shell Script.run_server.executor": "Run",
+    "git-widget-placeholder": "dj-graphQL-sorting-filtering-0705-p31",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Shell Script.run_server">
     <configuration name="auto_save" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="git add . &amp;&amp; git commit -m&quot;[auto_save] Push completed code&quot; &amp;&amp; git push" />
