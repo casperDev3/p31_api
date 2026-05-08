@@ -144,8 +144,23 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True, # Оновлювати поле last_login користувача при кожному успішному запиті на отримання access токена
 }
 
+
+AUTHENTICATION_BACKENDS = [
+    'graphql_jwt.backends.JSONWebTokenBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 GRAPHENE = {
     'SCHEMA': 'core.schema.schema',
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ],
+}
+
+
+
+GRAPHQL_JWT = {
+    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
 from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
