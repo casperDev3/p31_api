@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from channels.layers import get_channel_layer
+from asgiref.sync import async_to_sync
 
 
 class Article(models.Model):
@@ -12,7 +14,7 @@ class Article(models.Model):
         User,
         related_name='news',
         verbose_name='Автор',
-        on_delete=models.CASCADE, # Якщо користувач видаляється, видаляються і його статті
+        on_delete=models.CASCADE,  # Якщо користувач видаляється, видаляються і його статті
         null=True,
     )
     image = models.ImageField(upload_to='articles/%Y/%m/', null=True, blank=True, verbose_name="Зображення")
@@ -26,6 +28,20 @@ class Article(models.Model):
         verbose_name = "Стаття"
         verbose_name_plural = "Статті"
 
+    # after creating an article, we can send a notification to all users via WebSocket
+    def save(self, *args, **kwargs):
+        is_new = self.pk is None
+        super().save(*args, **kwargs)
+        if is_new:
+            channel_layer = get_channel_layer()
+            async_to_sync(channel_layer.group_send)(
+                'news_notifications',
+                {
+                    'type': 'send_notification',
+                    'message': f'{self.title}',
+                }
+            )
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Назва категорії")
@@ -34,7 +50,7 @@ class Category(models.Model):
         on_delete=models.SET_NULL,
         related_name='categories',
         verbose_name='Новини',
-        blank=True, # Дозволяє категорії існувати без прив'язки до статей
+        blank=True,  # Дозволяє категорії існувати без прив'язки до статей
         null=True,
     )
 
@@ -55,6 +71,7 @@ class Tag(models.Model):
     class Meta:
         verbose_name = "Тег"
         verbose_name_plural = "Теги"
+
 
 class Comment(models.Model):
     text = models.TextField(verbose_name="Текст коментаря")
