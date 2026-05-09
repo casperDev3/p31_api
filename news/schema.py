@@ -18,7 +18,7 @@ class ArticleFilter(django_filters.FilterSet):
 
     class Meta:
         model = Article
-        fields = ['id', 'tags']
+        fields = ['id', 'tags'] 
 
 class ArticleNode(DjangoObjectType):
     class Meta:
