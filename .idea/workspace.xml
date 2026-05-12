@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
-      <change afterPath="$PROJECT_DIR$/news/client_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/templates/news/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/templates/news/landing.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/client_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/templates/home/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/templates/news/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/news/templates/news/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/templates/home/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

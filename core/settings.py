@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     # custom apps
     'news',
     'authentication',
-    'factory'
+    'factory',
+    'static',
 ]
 
 MIDDLEWARE = [
