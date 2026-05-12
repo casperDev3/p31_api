@@ -4,7 +4,7 @@ from .models import Article, Category, Tag, Comment
 from .serializers import ArticleSerializer, CategorySerializer, TagSerializer, CommentSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 from .permissions import IsAuthorOrAdminOrReadOnly, IsEditorsGroupOrReadOnly
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
@@ -46,3 +46,13 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 class LandingView(TemplateView):
     template_name = 'news/landing.html'
+
+class ArticleListView(ListView):
+    model = Article
+    template_name = 'news/article_list.html'
+    context_object_name = 'articles'
+    ordering = ['-created_date']
+
+class ArticleDetailView(DetailView):
+    model = Article
+    template_name = 'news/article_detail.html'

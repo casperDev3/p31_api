@@ -10,6 +10,6 @@ router.register('', ArticleViewSet)
 
 
 urlpatterns = [
-    path('landing/', LandingView.as_view(), name='landing'),
+    path('landing/', LandingView.as_view()),
     path('', include(router.urls))
 ]

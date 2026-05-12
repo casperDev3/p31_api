@@ -1,0 +1,12 @@
+{% extends "news/base.html" %}
+
+{% block content %}
+    <article class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+        <h1 class="text-3xl font-bold mb-4">{{ article.title }}</h1>
+        <p class="text-gray-600 mb-6">Published at: {{ article.published_at }}</p>
+        <div class="prose prose-lg">
+            {{ article.content|linebreaks }}
+        </div>
+    </article>
+
+{% endblock %}

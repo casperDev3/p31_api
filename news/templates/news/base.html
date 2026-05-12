@@ -38,7 +38,7 @@
             <div class="flex items-center justify-between h-16">
 
                 <!-- Logo -->
-                <a href="{% url 'landing' %}" class="flex items-center gap-2 group">
+                <a href="/" class="flex items-center gap-2 group">
                     <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center group-hover:bg-primary-700 transition-colors">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,9 +50,8 @@
 
                 <!-- Nav -->
                 <nav class="hidden md:flex items-center gap-6">
-                    <a href="{% url 'landing' %}" class="text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">Головна</a>
-                    <a href="/api/" class="text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">REST API</a>
-                    <a href="/graphql/" class="text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">GraphQL</a>
+                    <a href="{% url 'landing' %}" class="text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">Лендинг</a>
+                    <a href="/news/" class="text-sm font-medium text-gray-700 hover:text-primary-600 transition-colors">Новини</a>
                 </nav>
 
                 <!-- Admin button -->
