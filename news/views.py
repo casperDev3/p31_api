@@ -4,6 +4,7 @@ from .models import Article, Category, Tag, Comment
 from .serializers import ArticleSerializer, CategorySerializer, TagSerializer, CommentSerializer
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 from .permissions import IsAuthorOrAdminOrReadOnly, IsEditorsGroupOrReadOnly
+from django.views.generic import TemplateView
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
@@ -26,14 +27,11 @@ class ArticleViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
-
-
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
     permission_classes = [IsAuthenticated]
-
 
 class TagViewSet(viewsets.ModelViewSet):
     queryset = Tag.objects.all()
@@ -45,3 +43,6 @@ class CommentViewSet(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
     permission_classes = [AllowAny]
+
+class LandingView(TemplateView):
+    template_name = 'news/landing.html'
