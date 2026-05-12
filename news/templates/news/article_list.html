@@ -1,15 +1,74 @@
 {% extends 'news/base.html' %}
 
+{% block title %}Новини — NewsHub{% endblock %}
+
 {% block content %}
-    <h1>Last news:</h1>
-    {% for article in articles %}
-        <div class="article">
-            <h2><a href="{% url 'news-detail' article.id %}">{{ article.title }}</a></h2>
-            <p>{{ article.content|truncatechars:100 }}</p>
-            <p>Published at: {{ article.published_at }}</p>
+
+<!-- PAGE HEADER -->
+<section class="bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <span class="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-widest uppercase">
+            Всі матеріали
+        </span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+            Останні новини
+        </h1>
+        <p class="text-purple-100 mt-4 text-lg max-w-xl mx-auto">
+            Актуальні статті та огляди від нашої редакції
+        </p>
+    </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    {% if articles %}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for article in articles %}
+            <a href="{% url 'news-detail' article.id %}"
+               class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col overflow-hidden group">
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
+                            <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-6-4h2"/>
+                            </svg>
+                        </div>
+                        <span class="text-xs text-gray-400 font-medium">{{ article.published_at|date:"d M Y" }}</span>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors leading-snug">
+                        {{ article.title }}
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed flex-1">
+                        {{ article.content|truncatechars:120 }}
+                    </p>
+                    <div class="mt-5 flex items-center text-primary-600 text-sm font-medium">
+                        Читати далі
+                        <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
         </div>
-    {% empty %}
-        <p>No articles available.</p>
-    {% endfor %}
+    {% else %}
+        <div class="text-center py-24">
+            <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-6-4h2"/>
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Статей поки немає</h3>
+            <p class="text-gray-500">Перевірте пізніше або додайте перші матеріали через адмін-панель.</p>
+            <a href="/admin/" class="mt-6 inline-block bg-primary-600 hover:bg-primary-700 text-white text-sm font-medium px-6 py-2.5 rounded-xl transition-colors">
+                Адмін-панель
+            </a>
+        </div>
+    {% endif %}
+
+</section>
 
 {% endblock %}

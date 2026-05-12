@@ -1,12 +1,69 @@
 {% extends "news/base.html" %}
 
+{% block title %}{{ article.title }} — NewsHub{% endblock %}
+
 {% block content %}
-    <article class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
-        <h1 class="text-3xl font-bold mb-4">{{ article.title }}</h1>
-        <p class="text-gray-600 mb-6">Published at: {{ article.published_at }}</p>
-        <div class="prose prose-lg">
-            {{ article.content|linebreaks }}
+
+<!-- BREADCRUMB -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+    <nav class="flex items-center gap-2 text-sm text-gray-400">
+        <a href="/" class="hover:text-primary-600 transition-colors">Головна</a>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <a href="/news/" class="hover:text-primary-600 transition-colors">Новини</a>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="text-gray-600 truncate max-w-xs">{{ article.title }}</span>
+    </nav>
+</div>
+
+<!-- ARTICLE -->
+<section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <article class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+
+        <!-- Article header -->
+        <div class="bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500 px-8 py-12 text-white">
+            <span class="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-5 tracking-widest uppercase">
+                Стаття
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
+                {{ article.title }}
+            </h1>
+            <div class="flex items-center gap-4 text-purple-200 text-sm">
+                <div class="flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    {{ article.published_at|date:"d M Y, H:i" }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Article body -->
+        <div class="px-8 py-10">
+            <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                {{ article.content|linebreaks }}
+            </div>
+        </div>
+
+        <!-- Footer actions -->
+        <div class="border-t border-gray-100 px-8 py-6 flex items-center justify-between bg-gray-50/50">
+            <a href="/news/"
+               class="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-primary-600 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Всі новини
+            </a>
+            <a href="/admin/news/article/{{ article.id }}/change/"
+               class="text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors">
+                Редагувати
+            </a>
         </div>
     </article>
+</section>
 
 {% endblock %}
