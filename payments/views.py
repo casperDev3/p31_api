@@ -22,7 +22,7 @@ def pay_view(request):
         'result_url': 'http://localhost:8000/payments/result/',  # URL для перенаправлення користувача після платежу
     }
     form_html = liqpay.cnb_form(params)
-    return render(request, 'payments/pay.html', {'form_html': form_html})
+    return render(request, 'payments/pay.html', {'form_html': form_html, 'order_id': order_id})
 
 
 @csrf_exempt
