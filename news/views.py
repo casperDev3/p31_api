@@ -7,6 +7,7 @@ from .permissions import IsAuthorOrAdminOrReadOnly, IsEditorsGroupOrReadOnly
 from django.views.generic import TemplateView, ListView, DetailView
 
 
+
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all().order_by('-created_date')
     serializer_class = ArticleSerializer
@@ -56,3 +57,4 @@ class ArticleListView(ListView):
 class ArticleDetailView(DetailView):
     model = Article
     template_name = 'news/article_detail.html'
+

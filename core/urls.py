@@ -14,6 +14,7 @@ urlpatterns = [
     path(f'{PREFIX_API}/graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path(f'{PREFIX_API}/news/', include('news.urls')),
     path(f'{PREFIX_API}/auth/', include('authentication.urls')),
+    path(f'{PREFIX_API}/payments/', include('payments.urls')),
 ]
 
 if settings.DEBUG:

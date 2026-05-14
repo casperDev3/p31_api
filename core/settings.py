@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-*4(ib1)cugp4^30bi(*e%5%8cd0$x$tw9*9cl0elcuqd0zk9re
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'authentication',
     'factory',
     'static',
+    'payments',
 ]
 
 MIDDLEWARE = [
@@ -175,6 +176,9 @@ GRAPHENE = {
 GRAPHQL_JWT = {
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
+
+LIQPAY_PUBLIC_KEY = 'sandbox_i96919624816'
+LIQPAY_PRIVATE_KEY = 'sandbox_uzxTKC2NscjtlNXs4giwqxN28g6kmb66mI08kBh5'
 
 from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
 
