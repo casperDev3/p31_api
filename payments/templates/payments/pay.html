@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Оплата</title>
-</head>
-<body>
-    <h1>Оплата за рахунок: {{order_id}}</h1>
+{% extends 'base.html' %}
+
+{% block title %}Новини — NewsHub{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Оплата за рахунок: {{order_id}}</h2>
     {{ form_html|safe }}
-</body>
-</html>
+</div>
+{% endblock %}
+
+

@@ -8,9 +8,13 @@ from django.views.decorators.csrf import csrf_exempt
 PREFIX_API = 'api/v1'
 
 urlpatterns = [
+    # clientside urls
     path('', include('static.client_urls')),
     path('admin/', admin.site.urls),
     path('news/', include('news.client_urls')),
+    path('payments/', include('payments.client_urls')),
+
+    # serverside urls
     path(f'{PREFIX_API}/graphql/', csrf_exempt(GraphQLView.as_view(graphiql=True))),
     path(f'{PREFIX_API}/news/', include('news.urls')),
     path(f'{PREFIX_API}/auth/', include('authentication.urls')),

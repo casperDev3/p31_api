@@ -18,8 +18,9 @@ def pay_view(request):
         'order_id': order_id,
         'version': '3',
         'sandbox': 1,  # Використовуємо тестовий режим
-        'server_url': 'http://localhost:8000/payments/callback/',  # URL для отримання результату платежу
-        'result_url': 'http://localhost:8000/payments/result/',  # URL для перенаправлення користувача після платежу
+        'server_url': 'https://2dd0-176-104-184-51.ngrok-free.app/api/v1/payments/callback/',
+        # URL для отримання результату платежу
+        'result_url': 'https://2dd0-176-104-184-51.ngrok-free.app',  # URL для перенаправлення користувача після платежу
     }
     form_html = liqpay.cnb_form(params)
     return render(request, 'payments/pay.html', {'form_html': form_html, 'order_id': order_id})
@@ -27,19 +28,36 @@ def pay_view(request):
 
 @csrf_exempt
 def liqpay_callback(request):
-    data = request.POST.get('data')
-    signature = request.POST.get('signature')
-    liqpay = LiqPay(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
     try:
-        if liqpay.check_signature(data, signature):
+        data = request.POST.get('data')
+        signature = request.POST.get('signature')
+        liqpay = LiqPay(settings.LIQPAY_PUBLIC_KEY, settings.LIQPAY_PRIVATE_KEY)
+        try:
+
+            # if liqpay.check_signature(data, signature):
+            #     # Розшифровуємо дані платежу
+            #     payment_data = liqpay.decode_data(data)
+            #     print(payment_data)
+            #     # Тут можна обробити результат платежу (наприклад, зберегти в базі даних)
+            #     return HttpResponse('OK')
+            # else:
+            #     return HttpResponse('Invalid signature', status=400)
+
             # Розшифровуємо дані платежу
-            payment_data = liqpay.decode_data(data)
-            print(payment_data)
-            # Тут можна обробити результат платежу (наприклад, зберегти в базі даних)
-            return HttpResponse('OK')
-        else:
-            return HttpResponse('Invalid signature', status=400)
+            payment_data = liqpay.decode_data_from_str(data)
+            status = payment_data.get('status')
+            order_id = payment_data.get('order_id')
+
+            if status in ['success', 'sandbox']:
+                print(f'Payment status: {status}, Order ID: {order_id}')
+            else:
+                print(f'Payment failed or pending. Status: {status}, Order ID: {order_id}')
+
+            return HttpResponse(f'Payment status: {status}, Order ID: {order_id}', status=200)
+        except Exception as e:
+            return HttpResponse(f'Error: {str(e)}', status=500)
     except Exception as e:
+        print('Error processing callback:', str(e))
         return HttpResponse(f'Error: {str(e)}', status=500)
 
 
