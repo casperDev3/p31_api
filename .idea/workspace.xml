@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,8 +72,9 @@
     "Shell Script.make_migrations.executor": "Run",
     "Shell Script.migrate.executor": "Run",
     "Shell Script.refresh_libs.executor": "Run",
+    "Shell Script.run tests.executor": "Run",
     "Shell Script.run_server.executor": "Run",
-    "git-widget-placeholder": "dj-payments-p31-1405",
+    "git-widget-placeholder": "dj-tests-p31-1605",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -84,7 +86,7 @@
       <recent name="$PROJECT_DIR$/core/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.auto_save">
+  <component name="RunManager" selected="Shell Script.run tests">
     <configuration name="auto_save" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="git add . &amp;&amp; git commit -m&quot;[auto_save] Push completed code&quot; &amp;&amp; git push" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -160,6 +162,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="run tests" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="python manage.py test" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="run_server" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="python manage.py runserver 8080" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -182,6 +199,7 @@
       <item itemvalue="Shell Script.migrate" />
       <item itemvalue="Shell Script.refresh_libs" />
       <item itemvalue="Shell Script.run_server" />
+      <item itemvalue="Shell Script.run tests" />
     </list>
   </component>
   <component name="SharedIndexes">
