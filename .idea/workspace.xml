@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e4f309d4-1e90-42fd-8556-eac33728724d" name="Changes" comment="demo git in terminal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +58,12 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for news.tests.ArticleAPITestCase.executor": "Run",
+    "Python tests.Python tests for news.tests.ArticleAPITestCase.test_create_article.executor": "Run",
+    "Python tests.Python tests for news.tests.ArticleModelTest.executor": "Run",
+    "Python tests.Python tests for news.tests.ArticleModelTest.test_article_creation.executor": "Run",
+    "Python tests.run test apps.executor": "Run",
+    "Python tests.run test.executor": "Run",
     "Python.main (1).executor": "Run",
     "Python.main.executor": "Run",
     "Python.rest api.executor": "Run",
@@ -86,7 +94,7 @@
       <recent name="$PROJECT_DIR$/core/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.run tests">
+  <component name="RunManager" selected="Shell Script.run_server">
     <configuration name="auto_save" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="git add . &amp;&amp; git commit -m&quot;[auto_save] Push completed code&quot; &amp;&amp; git push" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -192,7 +200,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for news.tests.ArticleAPITestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="p31_api" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;news.tests.ArticleAPITestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python tests.Python tests for news.tests.ArticleAPITestCase" />
       <item itemvalue="Shell Script.auto_save" />
       <item itemvalue="Shell Script.intall_libs" />
       <item itemvalue="Shell Script.make_migrations" />
@@ -201,6 +225,11 @@
       <item itemvalue="Shell Script.run_server" />
       <item itemvalue="Shell Script.run tests" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for news.tests.ArticleAPITestCase" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

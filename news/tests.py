@@ -53,7 +53,8 @@ class ArticleAPITestCase(APITestCase):
         # print('-- Results --')
         # print('-- Status --', self.assertEqual)
         # print('-- Have news --', self.assertTrue)
-        # print('-- Data --', data)
+        # print('-- Data QTY --', len(data))
+
 
     def test_create_article(self):
         data = {
@@ -62,15 +63,12 @@ class ArticleAPITestCase(APITestCase):
         }
         response = self.client.post(self.url, data)
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
-        # self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        # login
-        self.client.login(username='student_07', password='StrongPassword123!')
-        # check successful login
-        # is_logged_in = self.client.login(username='student_07', password='StrongPassword123!')
-        self.assertTrue(self.client.login(username='student_07', password='StrongPassword123!'))
 
-        # response = self.client.post(self.url, data)
-        # TODO: i logged in but still get 401, need to investigate why
-        # self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.client.force_authenticate(user=self.user)
+
+        response = self.client.post(self.url, data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        self.test_get_news()
 
 

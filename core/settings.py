@@ -180,6 +180,8 @@ GRAPHQL_JWT = {
 LIQPAY_PUBLIC_KEY = 'sandbox_i96919624816'
 LIQPAY_PRIVATE_KEY = 'sandbox_uzxTKC2NscjtlNXs4giwqxN28g6kmb66mI08kBh5'
 
+DJANGO_SETTINGS_MODULE = 'core.settings'
+
 from core.dashboard import get_dashboard_stats, get_activity_chart, get_categories_chart
 
 UNFOLD = {
